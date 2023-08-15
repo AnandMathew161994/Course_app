@@ -52,8 +52,8 @@ function Viewallcourses(){
                                 <Card sx={{width: 300 , minHeight : 200 , display : "flex" , justifyContent : "center" } }><div>
                             <Typography sx={{ display : "flex" ,justifyContent : "center",Align : "Center"}}>  {a.title} </Typography>
                             <br/>
-                            <img src={a.Image}></img>
-                            
+                            <img src={a.Image} style={{justifyContent: "center"}}></img>
+                            <Typography sx={{ display : "flex" ,justifyContent : "center",Align : "Center"}}>  {"$ " + a.price} </Typography>
                             <br></br>
                             </div>
                             </Card>
