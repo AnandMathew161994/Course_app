@@ -107,7 +107,7 @@ function Add_course() {
             }).then((res)=>{ res.json().then((a)=>{
               if(a.message=='Successful'){
                 setX('Added')
-                window.location='/course_add'
+  
               }else {
                   setX('Auth Failed')
               }
