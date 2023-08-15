@@ -1,25 +1,34 @@
 import logo from './logo.svg';
 import './App.css';
+import Signup from './components/singup';
+import Signin from './components/Singin'
+import Appbar1 from './components/appbar1';
+import Add_course from './components/Add_course';
+import {  BrowserRouter, Routes, Route,
+} from 'react-router-dom';
+import Courseadded from './components/course_added';
+import Viewcourses from './components/viewcourses';
+import { RecoilRoot } from 'recoil';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+<RecoilRoot>
+  
+<BrowserRouter>
+    <Routes>
+    <Route path="/" element= {<Appbar1/>} />
+      <Route path="/signin" element= {<Signin/>} />
+      <Route path="/singup" element={<Signup/>}/>
+      <Route path="/course_add" element={<Add_course/>}/>
+      <Route path="/course_added" element={<Courseadded/>}/>
+      <Route path="/allcourses" element={<Viewcourses/>}/>
+    </Routes>
+    </BrowserRouter>
+</RecoilRoot>
+   )
+  
 }
 
 export default App;
